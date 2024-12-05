@@ -10,8 +10,7 @@ window.addEventListener('load', function(){
 const menu = [
     {
         text : "Home",
-        link : "index.html"
-
+        link : "https://vukasin-antic.github.io/GameHaven/",
     },
     {
         text : "Shop",
