@@ -57,7 +57,7 @@ ul li a{
     cursor: pointer;
 }
 
-/* Mobilni prikaz */
+/* NAV ZA MOBILNI* */
 
 .navbar-mobile-menu {
     width: 100%;
@@ -328,22 +328,6 @@ footer{
     background-color: #28a745;
 }
 
- /* 
-.shop-item {
-    position: relative !important;
-    left: 0 !important;
-    top: 0 !important;
-    transform: scale(1) !important;
-    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
-    opacity: 1;
-}
-
-.shop-item.is-hidden, 
-.shop-item.isotope-hidden {
-    opacity: 0; 
-    pointer-events: none;
-} */
-
 .shop-item {
     position: relative !important;
     left: 0 !important;
@@ -381,8 +365,6 @@ button{
 .owl-prev, .owl-next{
     margin: 0px 100px !important;
     font-size: 24px !important;
-    /* color: #fff !important; */
-    /* background-color: #292828 !important; */
     transition: 0.5s all !important;
     width: 100px;
 }
@@ -392,28 +374,12 @@ button{
     background-color: #f7f7f7 !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .form-floating textarea{
     height: 150px !important;
     resize: none;
+}
+.formaEror{
+    padding: 10px 0px 0px 0px;
 }
 .btn-send{
     background-color: #008af8 !important;

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Welcome to Game Haven! Discover more about Vukašin Antić, his background, and interests. Get insights into his academic journey, hobbies, and social media profiles. Connect with him and explore the world of gaming through his perspective."/>
-    <meta name="keywords" content="Game Haven, Vukašin Antić, About Me, ICT, IT, Newsletter, Gaming Community, Vibrant Community, Endless Possibilities"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Game Haven to buy your favorite games, ask questions, and learn about our services. Discover FAQs, promotions, and customer support information.">
+    <meta name="keywords" content="Game Haven, contact Game Haven, buy games, game store, FAQs, gaming promotions, customer support, video games, PC games, PlayStation, Xbox, Nintendo Switch">
     <meta author="Vukasin Antic"/>
     <title>Game Haven</title>
     <link rel="icon" type="image/png" href="assets/img/icon.png"/>
@@ -46,55 +46,64 @@
             <div class="container-fluid">
                 <div class="row pb-5">
                     <div class="col-lg-8 mx-auto p-1 p-sm-5 form">
-                        <form method="get" action="#">
-                            <div class="row mb-3">
-                                <div class="col-6">
+                        <form method="get">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="text-center" id="successMessage"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="Fname" placeholder="First Name" required="required">
+                                        <input type="text" id="Fname" class="form-control" placeholder="First Name">
                                         <label for="Fname">First Name</label>
+                                        <span class="formaEror" id="errorFname"></span>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-md-6 mb-3">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="Lname" placeholder="Last Name" required="required">
+                                        <input type="text" id="Lname" class="form-control" placeholder="Last Name">
                                         <label for="Lname">Last Name</label>
+                                        <span class="formaEror" id="errorLname"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required="required">
-                                <label for="floatingInput">Email address</label>
+                                <input type="email" id="email" class="form-control" placeholder="">
+                                <label for="email">Email address</label>
+                                <span class="formaEror" id="errorEmail"></span>
                             </div>
-                            <div class="form-floating mb-3">
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
-                                    <option selected hidden>Pick Your Next Game</option>
-                                    <optgroup label="Action | Adventure">
-                                        <option value="Ghost of Tsushima">Ghost of Tsushima</option>
-                                        <option value="Sekiro™: Shadows Die Twice">Sekiro™: Shadows Die Twice</option>
-                                        <option value="Elden Ring">Elden Ring</option>
-                                        <option value="God of War">God of War</option>
-                                        <option value="Assassin's Creed Mirage">Assassin's Creed Mirage</option>
-                                        <option value="Assassin's Creed Valhalla">Assassin's Creed Valhalla</option>                                    
-                                        <option value="Grand Theft Auto V">Grand Theft Auto V</option>
-                                        <option value="Red Dead Redemption 2">Red Dead Redemption 2</option>
-                                    </optgroup>
-                                    <optgroup label="Shooter | Multiplayer | Other">
-                                        <option value="Call of Duty Modern Warfare">Call of Duty Modern Warfare</option>
-                                        <option value="Forza Horizon 5">Forza Horizon 5</option>
-                                        <option value="Horizon Zero Dawn">Horizon Zero Dawn</option>
-                                        <option value="Hogwarts Legacy">Hogwarts Legacy</option>
-                                    </optgroup>
-                                </select>
-                                <label for="floatingSelect">Discover Your Next Game</label>
+                            <div class="form-floating mb-3" id="ddl-category">
                             </div>
-                            <div class="form-floating mb-3">
+                            <span id="errorDdl"></span>
+                            <div class="form-floating my-3" id="ddl-games">
+                            </div>
+                            <span id="errorDdl-games"></span>
+                            <div class="form-floating d-flex justify-content-center">
+                                <div class="col-2 form-check">
+                                    <input type="radio" name="gender" id="m" value="m" class="form-check-input" >
+                                    <label class="form-check-label" for="m">Male</label>
+                                </div>
+                                <div class="col-2 form-check">
+                                    <input type="radio" name="gender" id="f" value="f" class="form-check-input">
+                                    <label class="form-check-label" for="f">Female</label>
+                                </div>
+                            </div>
+                            <span class="formaEror" id="errorRb"></span>
+                            
+                            <div class="form-floating my-3">
                                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                                 <label for="floatingTextarea">Tell Us About Your Experience</label>
                             </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                <button class="btn btn-send text-white fs-5" type="submit">Submit</button>
+                            <div class="form-check">
+                                <input type="checkbox" id="chb" class="form-check-input" >
+                                <label class="form-check-label" for="chb">I agree to terms and conditions</label>
                             </div>
+                            <span class="formaEror" id="errorChb"></span>
                         </form>
+                        <div class="col-12 d-flex justify-content-center mt-3">
+                            <button class="btn btn-send text-white fs-5" type="submit" id="btn-submit">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,94 +117,11 @@
             <div class="mx-auto text-center naslov">
                 <h1>Game Haven FAQs: Your Go-To Guide!</h1>
             </div>
-            <div class="row p-sm-5 justify-content-center">
-                <div class="col-md-9 mb-3">
-                    <button class="btn btn-question btn-send text-start mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#question1" aria-expanded="false" aria-controls="collapseExample">
-                        <p class="m-0 p-1">How can I purchase games from your website?</p>
-                    </button>
-                    <div class="collapse p-0" id="question1">
-                        <div class="card card-body">
-                            <p>
-                                You can buy games directly from our website by browsing our catalog, adding the desired games to your cart, and proceeding to checkout. We offer various payment options for your convenience.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 mb-3">
-                    <button class="btn btn-question btn-send text-start mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#question2" aria-expanded="false" aria-controls="collapseExample">
-                        <p class="m-0 p-1">What platforms are the games available for?</p>
-                    </button>
-                    <div class="collapse p-0" id="question2">
-                        <div class="card card-body">
-                            <p>
-                                Our games are available for a range of platforms, including PC, PlayStation, Xbox, Nintendo Switch, and more. Each game listing specifies the compatible platforms.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 mb-3">
-                    <button class="btn btn-question btn-send text-start mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#question3" aria-expanded="false" aria-controls="collapseExample">
-                        <p class="m-0 p-1">What is your return policy for games?</p>
-                    </button>
-                    <div class="collapse p-0" id="question3">
-                        <div class="card card-body">
-                            <p>
-                                We have a flexible return policy. If you encounter any issues with your purchase, such as technical problems or receiving a damaged physical copy, please contact us within [X] days for assistance.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 mb-3">
-                    <button class="btn btn-question btn-send text-start mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#question4" aria-expanded="false" aria-controls="collapseExample">
-                        <p class="m-0 p-1">Are there any discounts or promotions available?</p>
-                    </button>
-                    <div class="collapse p-0" id="question4">
-                        <div class="card card-body">
-                            <p>
-                                We regularly run discounts and promotions on select games. Keep an eye on our website or subscribe to our newsletter to stay updated on the latest deals.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 mb-3">
-                    <button class="btn btn-question btn-send text-start mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#question5" aria-expanded="false" aria-controls="collapseExample">
-                        <p class="m-0 p-1">Can I pre-order upcoming game releases?</p>
-                    </button>
-                    <div class="collapse p-0" id="question5">
-                        <div class="card card-body">
-                            <p>
-                                Yes, you can pre-order upcoming game releases through our website. Pre-ordering ensures that you'll receive the game on its release date or as soon as it becomes available.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 mb-3">
-                    <button class="btn btn-question btn-send text-start mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#question6" aria-expanded="false" aria-controls="collapseExample">
-                        <p class="m-0 p-1">Is there a loyalty or rewards program for frequent customers?</p>
-                    </button>
-                    <div class="collapse p-0" id="question6">
-                        <div class="card card-body">
-                            <p>
-                                Yes, we have a loyalty program for our frequent customers. Earn points for every purchase and redeem them for discounts or exclusive rewards.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 mb-3">
-                    <button class="btn btn-question btn-send  text-start mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#question7" aria-expanded="false" aria-controls="collapseExample">
-                        <p class="m-0 p-1">How can I contact customer support for assistance?</p>
-                    </button>
-                    <div class="collapse p-0" id="question7">
-                        <div class="card card-body">
-                            <p>
-                                You can reach our customer support team via email at [gamehaven@email.com], through the live chat feature on our website during business hours, or by phone at [069-123-4567]. We're here to help with any inquiries or issues you may have.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row p-sm-5 justify-content-center" id="faq-container">
             </div>
         </div>
-        
     </section>
+    
 
     <!-- FOOTER  -->
     <footer class="mt-5">
@@ -228,7 +154,7 @@
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- JQUERY ZA Owl Carousel) -->
+    <!-- JQUERY ZA Owl Carousel -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Owl Carousel JS -->
@@ -245,5 +171,7 @@
 
     <!-- main JS -->
     <script src="assets/js/main.js" type="text/javascript"></script>     
+    <script src="assets/js/contact.js" type="text/javascript"></script>     
+
 </body>
 </html>

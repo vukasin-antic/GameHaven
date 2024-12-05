@@ -3,6 +3,7 @@ window.addEventListener('load', function(){
     generateMenu();
     generateService();
     generateLatestGames();
+    generateAuthorInfo();
 })
 
 // MENI
@@ -204,7 +205,7 @@ if(divFacts){
 }
 // FACTS COUNTER
 
-function counterUp(elem, duration, delay, button){
+function counterUp(elem, duration, delay){
     var animationStarted = false;
     var value = parseFloat(elem.innerText);
     var starter = 0;
@@ -423,12 +424,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-
-
-
 // LATEST GAME SECTION
+
 const latestGamesItems = [
     {
         title: 'ARK: Survival Evolved 2',
@@ -465,7 +462,6 @@ const latestGamesItems = [
             both men and monsters in a violent co-op action-horror roguelite that challenges your survival skills and teamwork.`
     }
 ];
-
 
 function generateLatestGames() {
     var latestGames = document.querySelector("#latest-games");
@@ -508,7 +504,6 @@ function generateLatestGames() {
     }
 }
 
-
 // FOOTER
 
 const footerItems = [
@@ -541,7 +536,7 @@ const footerIcons = [
         name: 'fa-sitemap',
     },
     {
-        link: '#',
+        link: 'documentation.pdf',
         name: 'fa-file'
     },
 ];
@@ -576,17 +571,10 @@ function generateFooter(){
       footerSocialIcons.appendChild(ul);
 
 }
-// POZIVANJE FUNKCIJA
-autoSlider();
-generateTrending();
-generateModals();
-generateFooter()
 
 // SHOP.HTML
 
-
-
-var shopItems = [
+const shopItems = [
 
     { //Assassin's Creed Mirage
         class:'Action',
@@ -779,27 +767,6 @@ var shopItems = [
         
     }
 }
-createShop()
-
-$(document).ready(function () {
-    var $shopContainer = $('#shopContainer');
-    $shopContainer.imagesLoaded(function () {
-        $shopContainer.isotope({
-        itemSelector: '.shop-item',
-        layoutMode: 'fitRows',
-        transitionDuration: '0.7s'
-        });
-    });
-
-    $('#filter-buttons button').on('click', function () {
-        $("#filter-buttons button").removeClass('active');
-        $(this).addClass('active');
-        $shopContainer.isotope({ filter: $(this).data('filter') });
-    });
-
-    
-});
-
 
 // KLIJENTI
 
@@ -848,7 +815,7 @@ function generateClients(){
         clientDiv.innerHTML = clientHtml;
     }
 }
-generateClients()
+
 
 //AUTHOR.HTML
 
@@ -912,13 +879,22 @@ function generateAuthorInfo(){
     author.appendChild(authorDiv);
     }
 }
-generateAuthorInfo()
+
+// POZIVANJE FUNKCIJA
+autoSlider();
+generateTrending();
+generateModals();
+generateFooter();
+createShop();
+generateClients();
 
 // jQuery
 
-// MOBILE NAV
 
 $(document).ready(function () {
+    
+    // MOBILE NAV
+
     $('.mobile-nav-toggle').on('click', function () {
         $('.navbar').toggleClass('navbar-mobile');
         $(this).toggleClass('fa-bars fa-times');
@@ -935,11 +911,9 @@ $(document).ready(function () {
             $('.navbar-mobile-menu').remove();
         }
     });
-});
 
-// CAROUSEL
+    // CAROUSEL
 
-$(document).ready(function () {
     $('.carousel-inner').slick({
         autoplay: true,
         autoplaySpeed: 5000,
@@ -949,21 +923,37 @@ $(document).ready(function () {
         cssEase: 'ease-in-out',
         speed: 600,
     });
-});
 
-// KLIJENTI CAROUSEL
-$(document).ready(function () {
-$("#client-carousel").owlCarousel({
-    autoplay: true,
-    autoplayTimeout: 7000,
-    smartSpeed: 1000,
-    items: 1,
-    dots: false,
-    loop: true,
-    nav: true,
-    navText : [
-    '<i class="fa-solid fa-arrow-left"></i>',
-    '<i class="fa-solid fa-arrow-right"></i>',
-    ]
-});
+    // SHOP
+
+    var $shopContainer = $('#shopContainer');
+    $shopContainer.imagesLoaded(function () {
+        $shopContainer.isotope({
+        itemSelector: '.shop-item',
+        layoutMode: 'fitRows',
+        transitionDuration: '0.7s'
+        });
+    });
+
+    $('#filter-buttons button').on('click', function () {
+        $("#filter-buttons button").removeClass('active');
+        $(this).addClass('active');
+        $shopContainer.isotope({ filter: $(this).data('filter') });
+    });
+
+    // KLIJENTI CAROUSEL
+
+    $("#client-carousel").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 7000,
+        smartSpeed: 1000,
+        items: 1,
+        dots: false,
+        loop: true,
+        nav: true,
+        navText : [
+        '<i class="fa-solid fa-arrow-left"></i>',
+        '<i class="fa-solid fa-arrow-right"></i>',
+        ]
+    });
 });
