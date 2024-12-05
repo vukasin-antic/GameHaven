@@ -14,17 +14,17 @@ const menu = [
     },
     {
         text : "Shop",
-        link : "shop.html"
+        link : "https://vukasin-antic.github.io/GameHaven/shop.html"
 
     },
     {
         text : "Contact Us",
-        link : "contact-us.html"
+        link : "https://vukasin-antic.github.io/GameHaven/contact-us.html"
 
     },
     {
         text : "Author",
-        link : "author.html"
+        link : "https://vukasin-antic.github.io/GameHaven/author.html"
 
     }
 ];
