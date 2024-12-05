@@ -10,21 +10,21 @@ window.addEventListener('load', function(){
 const menu = [
     {
         text : "Home",
-        link : "https://vukasin-antic.github.io/GameHaven/",
+        link : "index.html",
     },
     {
         text : "Shop",
-        link : "https://vukasin-antic.github.io/GameHaven/shop.html"
+        link : "shop.html"
 
     },
     {
         text : "Contact Us",
-        link : "https://vukasin-antic.github.io/GameHaven/contact-us.html"
+        link : "contact-us.html"
 
     },
     {
         text : "Author",
-        link : "https://vukasin-antic.github.io/GameHaven/author.html"
+        link : "author.html"
 
     }
 ];
