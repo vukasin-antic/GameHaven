@@ -956,4 +956,20 @@ $(document).ready(function () {
         '<i class="fa-solid fa-arrow-right"></i>',
         ]
     });
+
+    // FOOTER EMAIL
+
+    $(document).ready(function () {
+        $('#btn-submit-email').on('click', function () {
+            var emailFooter = $('#emailFooter').val();
+            var emailRegexFooter = /(@gmail\.com|@yahoo\.com|@ict\.edu\.rs)$/;
+    
+            if (!emailRegexFooter.test(emailFooter)) {
+                $('#message').text('Invalid email').css('color', 'red');
+            } else {
+                $('#message').text('Successfully subscribed to our newsletter').css('color', 'green');
+                $('#emailInput').val('');
+            }
+        });
+    });
 });

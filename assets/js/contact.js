@@ -268,4 +268,6 @@ const faqItem = [
         const index = $(this).data("index");
         $(".faq-answer").eq(index).slideToggle();
     });
+
+    
 });

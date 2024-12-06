@@ -120,11 +120,14 @@
               <div class="col-md-8 col-lg-4 mx-auto pb-4 align-self-center">
                   <h2 class="text-center">Newsletter</h2>
                   <div class="mt-3">
+                     <form id="newsletter-form">
                       <div class="input-group">
-                        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter your email" required="required">
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <input type="email" class="form-control" id="emailFooter" aria-describedby="emailHelp" placeholder="Enter your email">
+                        <button type="button" class="btn btn-primary" id="btn-submit-email">Subscribe</button>
                       </div>
-                  </div>                          
+                      </form>
+                  </div>
+                  <div id="message" class="pt-2 text-center"></div>
               </div>
           </div>
           <div class="row mt-5">
